@@ -19,13 +19,7 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    colorView.layer.borderColor = UIColor.white.cgColor
-    colorView.layer.borderWidth = 5
-    
-    redSlider.minimumTrackTintColor = UIColor.red
-    blueSlider.minimumTrackTintColor = UIColor.blue
-    greenSlider.minimumTrackTintColor = UIColor.green
-    
+    formatUI()
     setColor(red: redSlider.value, green: greenSlider.value, blue: blueSlider.value)
   }
   
@@ -41,6 +35,15 @@ class ViewController: UIViewController {
     let CGblue = CGFloat(blue)
     
     colorView.backgroundColor = UIColor(displayP3Red: CGred, green: CGgreen, blue: CGblue, alpha: 1)
+  }
+  
+  func formatUI() {
+    colorView.layer.borderColor = UIColor.white.cgColor
+    colorView.layer.borderWidth = 5
+    
+    redSlider.minimumTrackTintColor = UIColor.red
+    blueSlider.minimumTrackTintColor = UIColor.blue
+    greenSlider.minimumTrackTintColor = UIColor.green
   }
 }
 
